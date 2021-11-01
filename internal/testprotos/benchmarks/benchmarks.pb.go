@@ -41,9 +41,9 @@ import (
 )
 
 type BenchmarkDataset struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	// Name of the benchmark dataset.  This should be unique across all datasets.
 	// Should only contain word characters: [a-zA-Z0-9_]

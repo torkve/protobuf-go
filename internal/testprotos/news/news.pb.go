@@ -66,9 +66,9 @@ func (Article_Status) EnumDescriptor() ([]byte, []int) {
 }
 
 type Article struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Author      string                 `protobuf:"bytes,1,opt,name=author,proto3" json:"author,omitempty"`
 	Date        *timestamppb.Timestamp `protobuf:"bytes,2,opt,name=date,proto3" json:"date,omitempty"`
@@ -161,9 +161,9 @@ func (x *Article) GetAttachments() []*anypb.Any {
 }
 
 type BinaryAttachment struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
 	Data []byte `protobuf:"bytes,2,opt,name=data,proto3" json:"data,omitempty"`
@@ -216,9 +216,9 @@ func (x *BinaryAttachment) GetData() []byte {
 }
 
 type KeyValueAttachment struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Name string            `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
 	Data map[string]string `protobuf:"bytes,2,rep,name=data,proto3" json:"data,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`

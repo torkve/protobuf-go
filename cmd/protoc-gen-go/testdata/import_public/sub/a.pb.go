@@ -180,10 +180,10 @@ func (M_Submessage_Submessage_Subenum) EnumDescriptor() ([]byte, []int) {
 }
 
 type M struct {
-	state           protoimpl.MessageState
-	sizeCache       protoimpl.SizeCache
-	unknownFields   protoimpl.UnknownFields
-	extensionFields protoimpl.ExtensionFields
+	state           protoimpl.MessageState    `json:"-"`
+	sizeCache       protoimpl.SizeCache       `json:"-"`
+	unknownFields   protoimpl.UnknownFields   `json:"-"`
+	extensionFields protoimpl.ExtensionFields `json:"-"`
 
 	// Field using a type in the same Go package, but a different source file.
 	M2 *M2      `protobuf:"bytes,1,opt,name=m2" json:"m2,omitempty"`
@@ -305,9 +305,9 @@ func (*M_OneofInt32) isM_OneofField() {}
 func (*M_OneofInt64) isM_OneofField() {}
 
 type M_Submessage struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	// Types that are assignable to SubmessageOneofField:
 	//	*M_Submessage_SubmessageOneofInt32

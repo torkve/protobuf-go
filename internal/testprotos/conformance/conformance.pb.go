@@ -165,9 +165,9 @@ func (TestCategory) EnumDescriptor() ([]byte, []int) {
 // This will be known by message_type == "conformance.FailureSet", a conformance
 // test should return a serialized FailureSet in protobuf_payload.
 type FailureSet struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Failure []string `protobuf:"bytes,1,rep,name=failure,proto3" json:"failure,omitempty"`
 }
@@ -217,9 +217,9 @@ func (x *FailureSet) GetFailure() []string {
 //   2. parse the protobuf or JSON payload in "payload" (which may fail)
 //   3. if the parse succeeded, serialize the message in the requested format.
 type ConformanceRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	// The payload (whether protobuf of JSON) is always for a
 	// protobuf_test_messages.proto3.TestAllTypes proto (as defined in
@@ -385,9 +385,9 @@ func (*ConformanceRequest_TextPayload) isConformanceRequest_Payload() {}
 
 // Represents a single test case's output.
 type ConformanceResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	// Types that are assignable to Result:
 	//	*ConformanceResponse_ParseError
@@ -572,9 +572,9 @@ func (*ConformanceResponse_TextPayload) isConformanceResponse_Result() {}
 
 // Encoding options for jspb format.
 type JspbEncodingConfig struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	// Encode the value field of Any as jspb array if true, otherwise binary.
 	UseJspbArrayAnyFormat bool `protobuf:"varint,1,opt,name=use_jspb_array_any_format,json=useJspbArrayAnyFormat,proto3" json:"use_jspb_array_any_format,omitempty"`

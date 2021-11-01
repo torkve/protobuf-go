@@ -15,10 +15,10 @@ import (
 )
 
 type MessageSet struct {
-	state           protoimpl.MessageState
-	sizeCache       protoimpl.SizeCache
-	unknownFields   protoimpl.UnknownFields
-	extensionFields protoimpl.ExtensionFields
+	state           protoimpl.MessageState    `json:"-"`
+	sizeCache       protoimpl.SizeCache       `json:"-"`
+	unknownFields   protoimpl.UnknownFields   `json:"-"`
+	extensionFields protoimpl.ExtensionFields `json:"-"`
 }
 
 func (x *MessageSet) Reset() {
@@ -54,9 +54,9 @@ func (*MessageSet) Descriptor() ([]byte, []int) {
 }
 
 type MessageSetContainer struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	MessageSet *MessageSet `protobuf:"bytes,1,opt,name=message_set,json=messageSet" json:"message_set,omitempty"`
 }

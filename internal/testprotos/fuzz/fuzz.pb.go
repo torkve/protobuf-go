@@ -18,9 +18,9 @@ import (
 
 // Fuzz is a container for every message we want to make available to the fuzzer.
 type Fuzz struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	TestAllTypes            *test.TestAllTypes            `protobuf:"bytes,1,opt,name=test_all_types,json=testAllTypes" json:"test_all_types,omitempty"`
 	TestAllExtensions       *test.TestAllExtensions       `protobuf:"bytes,2,opt,name=test_all_extensions,json=testAllExtensions" json:"test_all_extensions,omitempty"`

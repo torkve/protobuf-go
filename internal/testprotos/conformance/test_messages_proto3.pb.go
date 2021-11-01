@@ -220,9 +220,9 @@ func (TestAllTypesProto3_AliasedEnum) EnumDescriptor() ([]byte, []int) {
 // could trigger bugs that occur in any message type in this file.  We verify
 // this stays true in a unit test.
 type TestAllTypesProto3 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	// Singular
 	OptionalInt32          int32                             `protobuf:"varint,1,opt,name=optional_int32,json=optionalInt32,proto3" json:"optional_int32,omitempty"`
@@ -1548,9 +1548,9 @@ func (*TestAllTypesProto3_OneofEnum) isTestAllTypesProto3_OneofField() {}
 func (*TestAllTypesProto3_OneofNullValue) isTestAllTypesProto3_OneofField() {}
 
 type ForeignMessage struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	C int32 `protobuf:"varint,1,opt,name=c,proto3" json:"c,omitempty"`
 }
@@ -1595,9 +1595,9 @@ func (x *ForeignMessage) GetC() int32 {
 }
 
 type TestAllTypesProto3_NestedMessage struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	A           int32               `protobuf:"varint,1,opt,name=a,proto3" json:"a,omitempty"`
 	Corecursive *TestAllTypesProto3 `protobuf:"bytes,2,opt,name=corecursive,proto3" json:"corecursive,omitempty"`

@@ -43,9 +43,9 @@ import (
 )
 
 type GoogleMessage1 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field1   *string                   `protobuf:"bytes,1,req,name=field1" json:"field1,omitempty"`
 	Field9   *string                   `protobuf:"bytes,9,opt,name=field9" json:"field9,omitempty"`
@@ -438,9 +438,9 @@ func (x *GoogleMessage1) GetField131() int32 {
 }
 
 type GoogleMessage1SubMessage struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field1   *int32  `protobuf:"varint,1,opt,name=field1,def=0" json:"field1,omitempty"`
 	Field2   *int32  `protobuf:"varint,2,opt,name=field2,def=0" json:"field2,omitempty"`

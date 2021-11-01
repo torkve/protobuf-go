@@ -15,9 +15,9 @@ import (
 )
 
 type Int32 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	V *int32 `protobuf:"varint,1,req,name=v" json:"v,omitempty"`
 }
@@ -62,9 +62,9 @@ func (x *Int32) GetV() int32 {
 }
 
 type Int64 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	V *int64 `protobuf:"varint,1,req,name=v" json:"v,omitempty"`
 }
@@ -109,9 +109,9 @@ func (x *Int64) GetV() int64 {
 }
 
 type Uint32 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	V *uint32 `protobuf:"varint,1,req,name=v" json:"v,omitempty"`
 }
@@ -156,9 +156,9 @@ func (x *Uint32) GetV() uint32 {
 }
 
 type Uint64 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	V *uint64 `protobuf:"varint,1,req,name=v" json:"v,omitempty"`
 }
@@ -203,9 +203,9 @@ func (x *Uint64) GetV() uint64 {
 }
 
 type Sint32 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	V *int32 `protobuf:"zigzag32,1,req,name=v" json:"v,omitempty"`
 }
@@ -250,9 +250,9 @@ func (x *Sint32) GetV() int32 {
 }
 
 type Sint64 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	V *int64 `protobuf:"zigzag64,1,req,name=v" json:"v,omitempty"`
 }
@@ -297,9 +297,9 @@ func (x *Sint64) GetV() int64 {
 }
 
 type Fixed32 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	V *uint32 `protobuf:"fixed32,1,req,name=v" json:"v,omitempty"`
 }
@@ -344,9 +344,9 @@ func (x *Fixed32) GetV() uint32 {
 }
 
 type Fixed64 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	V *uint64 `protobuf:"fixed64,1,req,name=v" json:"v,omitempty"`
 }
@@ -391,9 +391,9 @@ func (x *Fixed64) GetV() uint64 {
 }
 
 type Float struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	V *float32 `protobuf:"fixed32,1,req,name=v" json:"v,omitempty"`
 }
@@ -438,9 +438,9 @@ func (x *Float) GetV() float32 {
 }
 
 type Double struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	V *float64 `protobuf:"fixed64,1,req,name=v" json:"v,omitempty"`
 }
@@ -485,9 +485,9 @@ func (x *Double) GetV() float64 {
 }
 
 type Bool struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	V *bool `protobuf:"varint,1,req,name=v" json:"v,omitempty"`
 }
@@ -532,9 +532,9 @@ func (x *Bool) GetV() bool {
 }
 
 type String struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	V *string `protobuf:"bytes,1,req,name=v" json:"v,omitempty"`
 }
@@ -579,9 +579,9 @@ func (x *String) GetV() string {
 }
 
 type Bytes struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	V []byte `protobuf:"bytes,1,req,name=v" json:"v,omitempty"`
 }
@@ -626,9 +626,9 @@ func (x *Bytes) GetV() []byte {
 }
 
 type Message struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	V *Message_M `protobuf:"bytes,1,req,name=v" json:"v,omitempty"`
 }
@@ -673,9 +673,9 @@ func (x *Message) GetV() *Message_M {
 }
 
 type Group struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Group *Group_Group `protobuf:"group,1,req,name=Group,json=group" json:"group,omitempty"`
 }
@@ -720,9 +720,9 @@ func (x *Group) GetGroup() *Group_Group {
 }
 
 type Message_M struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 }
 
 func (x *Message_M) Reset() {
@@ -758,9 +758,9 @@ func (*Message_M) Descriptor() ([]byte, []int) {
 }
 
 type Group_Group struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	V *int32 `protobuf:"varint,1,opt,name=v" json:"v,omitempty"`
 }

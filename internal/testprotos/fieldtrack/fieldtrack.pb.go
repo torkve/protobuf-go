@@ -18,10 +18,10 @@ import (
 )
 
 type TestFieldTrack struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	weakFields    protoimpl.WeakFields
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	weakFields    protoimpl.WeakFields    `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	OptionalInt32         *int32                                      `protobuf:"varint,1,opt,name=optional_int32,json=optionalInt32" json:"optional_int32,omitempty" go:"track"`
 	OptionalInt64         *int64                                      `protobuf:"varint,2,opt,name=optional_int64,json=optionalInt64" json:"optional_int64,omitempty" go:"track"`

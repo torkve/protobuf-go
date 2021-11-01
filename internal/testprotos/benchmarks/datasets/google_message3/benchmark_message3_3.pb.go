@@ -43,9 +43,9 @@ import (
 )
 
 type Message35546 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field35556   *int64                     `protobuf:"varint,1,opt,name=field35556" json:"field35556,omitempty"`
 	Field35557   *int32                     `protobuf:"varint,2,opt,name=field35557" json:"field35557,omitempty"`
@@ -178,9 +178,9 @@ func (x *Message35546) GetField35567() string {
 }
 
 type Message2356 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field2368   *Message1374               `protobuf:"bytes,121,opt,name=field2368" json:"field2368,omitempty"`
 	Field2369   *uint64                    `protobuf:"varint,1,opt,name=field2369" json:"field2369,omitempty"`
@@ -465,9 +465,9 @@ func (x *Message2356) GetField2398() string {
 }
 
 type Message7029 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field7183   *int32                     `protobuf:"varint,1,req,name=field7183" json:"field7183,omitempty"`
 	Field7184   *int32                     `protobuf:"varint,2,opt,name=field7184" json:"field7184,omitempty"`
@@ -840,9 +840,9 @@ func (x *Message7029) GetField7224() int32 {
 }
 
 type Message35538 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field35539 *int64 `protobuf:"varint,1,req,name=field35539" json:"field35539,omitempty"`
 }
@@ -887,9 +887,9 @@ func (x *Message35538) GetField35539() int64 {
 }
 
 type Message18921 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field18946   *string                      `protobuf:"bytes,1,opt,name=field18946" json:"field18946,omitempty"`
 	Field18947   *uint64                      `protobuf:"fixed64,2,opt,name=field18947" json:"field18947,omitempty"`
@@ -1022,9 +1022,9 @@ func (x *Message18921) GetField18957() []*UnusedEmptyMessage {
 }
 
 type Message35540 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field35541 *bool `protobuf:"varint,1,opt,name=field35541" json:"field35541,omitempty"`
 }
@@ -1069,9 +1069,9 @@ func (x *Message35540) GetField35541() bool {
 }
 
 type Message3886 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Message3887 []*Message3886_Message3887 `protobuf:"group,1,rep,name=Message3887,json=message3887" json:"message3887,omitempty"`
 }
@@ -1116,9 +1116,9 @@ func (x *Message3886) GetMessage3887() []*Message3886_Message3887 {
 }
 
 type Message6743 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field6759 *Message6721 `protobuf:"bytes,1,opt,name=field6759" json:"field6759,omitempty"`
 	Field6760 *Message6723 `protobuf:"bytes,2,opt,name=field6760" json:"field6760,omitempty"`
@@ -1219,9 +1219,9 @@ func (x *Message6743) GetField6766() *Message6742 {
 }
 
 type Message6773 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field6794 *Enum6769   `protobuf:"varint,1,opt,name=field6794,enum=benchmarks.google_message3.Enum6769" json:"field6794,omitempty"`
 	Field6795 *int32      `protobuf:"varint,9,opt,name=field6795" json:"field6795,omitempty"`
@@ -1338,9 +1338,9 @@ func (x *Message6773) GetField6803() Enum6782 {
 }
 
 type Message8224 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field8255 *UnusedEmptyMessage   `protobuf:"bytes,1,opt,name=field8255" json:"field8255,omitempty"`
 	Field8256 *Message8184          `protobuf:"bytes,2,opt,name=field8256" json:"field8256,omitempty"`
@@ -1593,9 +1593,9 @@ func (x *Message8224) GetField8281() []*UnusedEmptyMessage {
 }
 
 type Message8392 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field8395 *string      `protobuf:"bytes,1,opt,name=field8395" json:"field8395,omitempty"`
 	Field8396 *string      `protobuf:"bytes,2,opt,name=field8396" json:"field8396,omitempty"`
@@ -1704,9 +1704,9 @@ func (x *Message8392) GetField8403() string {
 }
 
 type Message8130 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field8156 *string               `protobuf:"bytes,1,opt,name=field8156" json:"field8156,omitempty"`
 	Field8157 *string               `protobuf:"bytes,2,opt,name=field8157" json:"field8157,omitempty"`
@@ -1935,9 +1935,9 @@ func (x *Message8130) GetField8179() []*UnusedEmptyMessage {
 }
 
 type Message8478 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field8489 *string             `protobuf:"bytes,7,opt,name=field8489" json:"field8489,omitempty"`
 	Field8490 *Message7966        `protobuf:"bytes,1,opt,name=field8490" json:"field8490,omitempty"`
@@ -2038,9 +2038,9 @@ func (x *Message8478) GetField8496() *UnusedEmptyMessage {
 }
 
 type Message8479 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field8497 *Message8475        `protobuf:"bytes,1,opt,name=field8497" json:"field8497,omitempty"`
 	Field8498 *Message7966        `protobuf:"bytes,2,opt,name=field8498" json:"field8498,omitempty"`
@@ -2149,9 +2149,9 @@ func (x *Message8479) GetField8505() *UnusedEmptyMessage {
 }
 
 type Message10319 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field10340 *Enum10325 `protobuf:"varint,1,opt,name=field10340,enum=benchmarks.google_message3.Enum10325" json:"field10340,omitempty"`
 	Field10341 *int32     `protobuf:"varint,4,opt,name=field10341" json:"field10341,omitempty"`
@@ -2244,9 +2244,9 @@ func (x *Message10319) GetField10346() string {
 }
 
 type Message4016 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field4017 *int32 `protobuf:"varint,1,req,name=field4017" json:"field4017,omitempty"`
 	Field4018 *int32 `protobuf:"varint,2,req,name=field4018" json:"field4018,omitempty"`
@@ -2315,9 +2315,9 @@ func (x *Message4016) GetField4020() int32 {
 }
 
 type Message12669 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field12681 *Message12559 `protobuf:"bytes,1,opt,name=field12681" json:"field12681,omitempty"`
 	Field12682 *float32      `protobuf:"fixed32,2,opt,name=field12682" json:"field12682,omitempty"`
@@ -2386,9 +2386,9 @@ func (x *Message12669) GetField12684() Enum12670 {
 }
 
 type Message12819 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field12834 *float64 `protobuf:"fixed64,1,opt,name=field12834" json:"field12834,omitempty"`
 	Field12835 *float64 `protobuf:"fixed64,2,opt,name=field12835" json:"field12835,omitempty"`
@@ -2473,9 +2473,9 @@ func (x *Message12819) GetField12839() float64 {
 }
 
 type Message12820 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field12840 *int32 `protobuf:"varint,1,opt,name=field12840" json:"field12840,omitempty"`
 	Field12841 *int32 `protobuf:"varint,2,opt,name=field12841" json:"field12841,omitempty"`
@@ -2576,9 +2576,9 @@ func (x *Message12820) GetField12847() int32 {
 }
 
 type Message12821 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field12848 *int32 `protobuf:"varint,1,opt,name=field12848" json:"field12848,omitempty"`
 	Field12849 *int32 `protobuf:"varint,2,opt,name=field12849" json:"field12849,omitempty"`
@@ -2655,9 +2655,9 @@ func (x *Message12821) GetField12852() int32 {
 }
 
 type Message12818 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field12829 *uint64         `protobuf:"varint,1,opt,name=field12829" json:"field12829,omitempty"`
 	Field12830 *int32          `protobuf:"varint,2,opt,name=field12830" json:"field12830,omitempty"`
@@ -2734,9 +2734,9 @@ func (x *Message12818) GetField12833() []*Message12817 {
 }
 
 type Message16479 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field16484 *Message16480 `protobuf:"bytes,1,opt,name=field16484" json:"field16484,omitempty"`
 	Field16485 *int32        `protobuf:"varint,5,opt,name=field16485" json:"field16485,omitempty"`
@@ -2821,9 +2821,9 @@ func (x *Message16479) GetField16489() uint32 {
 }
 
 type Message16722 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field16752 *string `protobuf:"bytes,1,opt,name=field16752" json:"field16752,omitempty"`
 	Field16753 *string `protobuf:"bytes,2,opt,name=field16753" json:"field16753,omitempty"`
@@ -2900,9 +2900,9 @@ func (x *Message16722) GetField16756() string {
 }
 
 type Message16724 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field16761 *int64              `protobuf:"varint,1,opt,name=field16761" json:"field16761,omitempty"`
 	Field16762 *float32            `protobuf:"fixed32,2,opt,name=field16762" json:"field16762,omitempty"`
@@ -3043,9 +3043,9 @@ func (x *Message16724) GetField16773() bool {
 }
 
 type Message17728 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 }
 
 func (x *Message17728) Reset() {
@@ -3081,9 +3081,9 @@ func (*Message17728) Descriptor() ([]byte, []int) {
 }
 
 type Message24356 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field24559 *string               `protobuf:"bytes,1,opt,name=field24559" json:"field24559,omitempty"`
 	Field24560 *string               `protobuf:"bytes,2,opt,name=field24560" json:"field24560,omitempty"`
@@ -3240,9 +3240,9 @@ func (x *Message24356) GetField24573() []string {
 }
 
 type Message24376 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field24589 *string               `protobuf:"bytes,1,opt,name=field24589" json:"field24589,omitempty"`
 	Field24590 *string               `protobuf:"bytes,2,opt,name=field24590" json:"field24590,omitempty"`
@@ -3391,9 +3391,9 @@ func (x *Message24376) GetField24602() []string {
 }
 
 type Message24366 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field24574 *string               `protobuf:"bytes,1,opt,name=field24574" json:"field24574,omitempty"`
 	Field24575 *string               `protobuf:"bytes,2,opt,name=field24575" json:"field24575,omitempty"`
@@ -3550,9 +3550,9 @@ func (x *Message24366) GetField24588() []string {
 }
 
 type Message35546_Message35547 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field35569 *int32 `protobuf:"varint,5,req,name=field35569" json:"field35569,omitempty"`
 	Field35570 *int32 `protobuf:"varint,6,req,name=field35570" json:"field35570,omitempty"`
@@ -3605,9 +3605,9 @@ func (x *Message35546_Message35547) GetField35570() int32 {
 }
 
 type Message35546_Message35548 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field35571 *int64 `protobuf:"varint,11,req,name=field35571" json:"field35571,omitempty"`
 	Field35572 *int64 `protobuf:"varint,12,req,name=field35572" json:"field35572,omitempty"`
@@ -3660,9 +3660,9 @@ func (x *Message35546_Message35548) GetField35572() int64 {
 }
 
 type Message2356_Message2357 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field2399 *int64 `protobuf:"varint,9,opt,name=field2399" json:"field2399,omitempty"`
 	Field2400 *int32 `protobuf:"varint,10,opt,name=field2400" json:"field2400,omitempty"`
@@ -3795,9 +3795,9 @@ func (x *Message2356_Message2357) GetField2410() []byte {
 }
 
 type Message2356_Message2358 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 }
 
 func (x *Message2356_Message2358) Reset() {
@@ -3833,9 +3833,9 @@ func (*Message2356_Message2358) Descriptor() ([]byte, []int) {
 }
 
 type Message2356_Message2359 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field2413 *string  `protobuf:"bytes,41,opt,name=field2413" json:"field2413,omitempty"`
 	Field2414 *string  `protobuf:"bytes,42,opt,name=field2414" json:"field2414,omitempty"`
@@ -3936,9 +3936,9 @@ func (x *Message2356_Message2359) GetField2420() float32 {
 }
 
 type Message7029_Message7030 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field7226 *string `protobuf:"bytes,14,opt,name=field7226" json:"field7226,omitempty"`
 	Field7227 *string `protobuf:"bytes,15,opt,name=field7227" json:"field7227,omitempty"`
@@ -3999,9 +3999,9 @@ func (x *Message7029_Message7030) GetField7228() int64 {
 }
 
 type Message7029_Message7031 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field7229 *string `protobuf:"bytes,22,opt,name=field7229" json:"field7229,omitempty"`
 	Field7230 *int32  `protobuf:"varint,23,opt,name=field7230" json:"field7230,omitempty"`
@@ -4086,9 +4086,9 @@ func (x *Message7029_Message7031) GetField7234() int32 {
 }
 
 type Message18921_Message18922 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field18959 *uint64             `protobuf:"varint,6,opt,name=field18959" json:"field18959,omitempty"`
 	Field18960 *string             `protobuf:"bytes,13,opt,name=field18960" json:"field18960,omitempty"`
@@ -4309,9 +4309,9 @@ func (x *Message18921_Message18922) GetField18981() float32 {
 }
 
 type Message3886_Message3887 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field3932 *string      `protobuf:"bytes,2,req,name=field3932" json:"field3932,omitempty"`
 	Field3933 *string      `protobuf:"bytes,9,opt,name=field3933" json:"field3933,omitempty"`

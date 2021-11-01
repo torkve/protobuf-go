@@ -77,10 +77,10 @@ func (Enum1) EnumDescriptor() ([]byte, []int) {
 
 // COMMENT: Message1.Leading
 type Message1 struct {
-	state           protoimpl.MessageState
-	sizeCache       protoimpl.SizeCache
-	unknownFields   protoimpl.UnknownFields
-	extensionFields protoimpl.ExtensionFields
+	state           protoimpl.MessageState    `json:"-"`
+	sizeCache       protoimpl.SizeCache       `json:"-"`
+	unknownFields   protoimpl.UnknownFields   `json:"-"`
+	extensionFields protoimpl.ExtensionFields `json:"-"`
 
 	// COMMENT: Field1A.Leading
 	Field1A *string `protobuf:"bytes,1,opt,name=Field1A" json:"Field1A,omitempty"` // COMMENT: Field1A.Trailing
@@ -157,9 +157,9 @@ func (*Message1_Oneof1AField1) isMessage1_Oneof1A() {}
 
 // COMMENT: Message2
 type Message2 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 }
 
 func (x *Message2) Reset() {
@@ -196,9 +196,9 @@ func (*Message2) Descriptor() ([]byte, []int) {
 
 // COMMENT: Message1A.Leading
 type Message1_Message1A struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 }
 
 func (x *Message1_Message1A) Reset() {
@@ -235,9 +235,9 @@ func (*Message1_Message1A) Descriptor() ([]byte, []int) {
 
 // COMMENT: Message1B
 type Message1_Message1B struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 }
 
 func (x *Message1_Message1B) Reset() {
@@ -274,9 +274,9 @@ func (*Message1_Message1B) Descriptor() ([]byte, []int) {
 
 // COMMENT: Message2A
 type Message2_Message2A struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 }
 
 func (x *Message2_Message2A) Reset() {
@@ -313,9 +313,9 @@ func (*Message2_Message2A) Descriptor() ([]byte, []int) {
 
 // COMMENT: Message2B
 type Message2_Message2B struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 }
 
 func (x *Message2_Message2B) Reset() {

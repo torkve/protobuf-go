@@ -116,9 +116,9 @@ func (CodeGeneratorResponse_Feature) EnumDescriptor() ([]byte, []int) {
 
 // The version number of protocol compiler.
 type Version struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Major *int32 `protobuf:"varint,1,opt,name=major" json:"major,omitempty"`
 	Minor *int32 `protobuf:"varint,2,opt,name=minor" json:"minor,omitempty"`
@@ -190,9 +190,9 @@ func (x *Version) GetSuffix() string {
 
 // An encoded CodeGeneratorRequest is written to the plugin's stdin.
 type CodeGeneratorRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	// The .proto files that were explicitly listed on the command-line.  The
 	// code generator should generate code only for these files.  Each file's
@@ -281,9 +281,9 @@ func (x *CodeGeneratorRequest) GetCompilerVersion() *Version {
 
 // The plugin writes an encoded CodeGeneratorResponse to stdout.
 type CodeGeneratorResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	// Error message.  If non-empty, code generation failed.  The plugin process
 	// should exit with status code zero even if it reports an error in this way.
@@ -355,9 +355,9 @@ func (x *CodeGeneratorResponse) GetFile() []*CodeGeneratorResponse_File {
 
 // Represents a single generated file.
 type CodeGeneratorResponse_File struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	// The file name, relative to the output directory.  The name must not
 	// contain "." or ".." components and must be relative, not be absolute (so,

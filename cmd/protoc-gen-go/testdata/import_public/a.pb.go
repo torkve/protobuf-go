@@ -54,9 +54,9 @@ type M_Submessage_SubmessageOneofInt64 = sub.M_Submessage_SubmessageOneofInt64
 var E_ExtensionField = sub.E_ExtensionField
 
 type Public struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	M     *sub.M `protobuf:"bytes,1,opt,name=m" json:"m,omitempty"`
 	E     *sub.E `protobuf:"varint,2,opt,name=e,enum=goproto.protoc.import_public.sub.E" json:"e,omitempty"`

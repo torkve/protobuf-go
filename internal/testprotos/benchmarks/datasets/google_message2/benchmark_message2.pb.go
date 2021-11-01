@@ -45,9 +45,9 @@ import (
 )
 
 type GoogleMessage2 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field1   *string                  `protobuf:"bytes,1,opt,name=field1" json:"field1,omitempty"`
 	Field3   *int64                   `protobuf:"varint,3,opt,name=field3" json:"field3,omitempty"`
@@ -343,9 +343,9 @@ func (x *GoogleMessage2) GetField206() bool {
 }
 
 type GoogleMessage2GroupedMessage struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field1  *float32 `protobuf:"fixed32,1,opt,name=field1" json:"field1,omitempty"`
 	Field2  *float32 `protobuf:"fixed32,2,opt,name=field2" json:"field2,omitempty"`
@@ -477,9 +477,9 @@ func (x *GoogleMessage2GroupedMessage) GetField11() int64 {
 }
 
 type GoogleMessage2_Group1 struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Field11 *float32                      `protobuf:"fixed32,11,req,name=field11" json:"field11,omitempty"`
 	Field26 *float32                      `protobuf:"fixed32,26,opt,name=field26" json:"field26,omitempty"`

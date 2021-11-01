@@ -27,9 +27,9 @@ import (
 )
 
 type Legacy struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	F1  *proto2_20160225_2fc053c5.Message `protobuf:"bytes,1,opt,name=f1,proto3" json:"f1,omitempty"`
 	F2  *proto3_20160225_2fc053c5.Message `protobuf:"bytes,2,opt,name=f2,proto3" json:"f2,omitempty"`

@@ -52,9 +52,9 @@ import (
 // this message itself. See https://cloud.google.com/apis/design/glossary for
 // detailed terminology.
 type Api struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	// The fully qualified name of this interface, including package name
 	// followed by the interface's simple name.
@@ -177,9 +177,9 @@ func (x *Api) GetSyntax() typepb.Syntax {
 
 // Method represents a method of an API interface.
 type Method struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	// The simple name of this method.
 	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
@@ -357,9 +357,9 @@ func (x *Method) GetSyntax() typepb.Syntax {
 //       ...
 //     }
 type Mixin struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	// The fully qualified name of the interface which is included.
 	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`

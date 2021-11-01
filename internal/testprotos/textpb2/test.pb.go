@@ -143,9 +143,9 @@ func (Enums_NestedEnum) EnumDescriptor() ([]byte, []int) {
 
 // Scalars contains optional scalar fields.
 type Scalars struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	OptBool     *bool    `protobuf:"varint,1,opt,name=opt_bool,json=optBool" json:"opt_bool,omitempty"`
 	OptInt32    *int32   `protobuf:"varint,2,opt,name=opt_int32,json=optInt32" json:"opt_int32,omitempty"`
@@ -303,9 +303,9 @@ func (x *Scalars) GetOptString() string {
 
 // Message contains enum fields.
 type Enums struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	OptEnum       *Enum              `protobuf:"varint,1,opt,name=opt_enum,json=optEnum,enum=pb2.Enum" json:"opt_enum,omitempty"`
 	RptEnum       []Enum             `protobuf:"varint,2,rep,name=rpt_enum,json=rptEnum,enum=pb2.Enum" json:"rpt_enum,omitempty"`
@@ -375,9 +375,9 @@ func (x *Enums) GetRptNestedEnum() []Enums_NestedEnum {
 
 // Message contains repeated fields.
 type Repeats struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	RptBool   []bool    `protobuf:"varint,1,rep,name=rpt_bool,json=rptBool" json:"rpt_bool,omitempty"`
 	RptInt32  []int32   `protobuf:"varint,2,rep,name=rpt_int32,json=rptInt32" json:"rpt_int32,omitempty"`
@@ -487,9 +487,9 @@ func (x *Repeats) GetRptBytes() [][]byte {
 
 // Message contains map fields.
 type Maps struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Int32ToStr  map[int32]string   `protobuf:"bytes,1,rep,name=int32_to_str,json=int32ToStr" json:"int32_to_str,omitempty" protobuf_key:"varint,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	StrToNested map[string]*Nested `protobuf:"bytes,4,rep,name=str_to_nested,json=strToNested" json:"str_to_nested,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
@@ -543,9 +543,9 @@ func (x *Maps) GetStrToNested() map[string]*Nested {
 
 // Message type used as submessage.
 type Nested struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	OptString *string `protobuf:"bytes,1,opt,name=opt_string,json=optString" json:"opt_string,omitempty"`
 	OptNested *Nested `protobuf:"bytes,2,opt,name=opt_nested,json=optNested" json:"opt_nested,omitempty"`
@@ -599,9 +599,9 @@ func (x *Nested) GetOptNested() *Nested {
 
 // Message contains message and group fields.
 type Nests struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	OptNested *Nested           `protobuf:"bytes,1,opt,name=opt_nested,json=optNested" json:"opt_nested,omitempty"`
 	Optgroup  *Nests_OptGroup   `protobuf:"group,2,opt,name=OptGroup,json=optgroup" json:"optgroup,omitempty"`
@@ -671,9 +671,9 @@ func (x *Nests) GetRptgroup() []*Nests_RptGroup {
 
 // Message contains required fields.
 type Requireds struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	ReqBool     *bool    `protobuf:"varint,1,req,name=req_bool,json=reqBool" json:"req_bool,omitempty"`
 	ReqSfixed64 *int64   `protobuf:"fixed64,2,req,name=req_sfixed64,json=reqSfixed64" json:"req_sfixed64,omitempty"`
@@ -759,9 +759,9 @@ func (x *Requireds) GetReqNested() *Nested {
 
 // Message contains both required and optional fields.
 type PartialRequired struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	ReqString *string `protobuf:"bytes,1,req,name=req_string,json=reqString" json:"req_string,omitempty"`
 	OptString *string `protobuf:"bytes,2,opt,name=opt_string,json=optString" json:"opt_string,omitempty"`
@@ -814,9 +814,9 @@ func (x *PartialRequired) GetOptString() string {
 }
 
 type NestedWithRequired struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	ReqString *string `protobuf:"bytes,1,req,name=req_string,json=reqString" json:"req_string,omitempty"`
 }
@@ -861,9 +861,9 @@ func (x *NestedWithRequired) GetReqString() string {
 }
 
 type IndirectRequired struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	OptNested   *NestedWithRequired            `protobuf:"bytes,1,opt,name=opt_nested,json=optNested" json:"opt_nested,omitempty"`
 	RptNested   []*NestedWithRequired          `protobuf:"bytes,2,rep,name=rpt_nested,json=rptNested" json:"rpt_nested,omitempty"`
@@ -951,10 +951,10 @@ type IndirectRequired_OneofNested struct {
 func (*IndirectRequired_OneofNested) isIndirectRequired_Union() {}
 
 type Extensions struct {
-	state           protoimpl.MessageState
-	sizeCache       protoimpl.SizeCache
-	unknownFields   protoimpl.UnknownFields
-	extensionFields protoimpl.ExtensionFields
+	state           protoimpl.MessageState    `json:"-"`
+	sizeCache       protoimpl.SizeCache       `json:"-"`
+	unknownFields   protoimpl.UnknownFields   `json:"-"`
+	extensionFields protoimpl.ExtensionFields `json:"-"`
 
 	OptString *string `protobuf:"bytes,1,opt,name=opt_string,json=optString" json:"opt_string,omitempty"`
 	OptBool   *bool   `protobuf:"varint,101,opt,name=opt_bool,json=optBool" json:"opt_bool,omitempty"`
@@ -1015,9 +1015,9 @@ func (x *Extensions) GetOptInt32() int32 {
 }
 
 type ExtensionsContainer struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 }
 
 func (x *ExtensionsContainer) Reset() {
@@ -1053,10 +1053,10 @@ func (*ExtensionsContainer) Descriptor() ([]byte, []int) {
 }
 
 type MessageSet struct {
-	state           protoimpl.MessageState
-	sizeCache       protoimpl.SizeCache
-	unknownFields   protoimpl.UnknownFields
-	extensionFields protoimpl.ExtensionFields
+	state           protoimpl.MessageState    `json:"-"`
+	sizeCache       protoimpl.SizeCache       `json:"-"`
+	unknownFields   protoimpl.UnknownFields   `json:"-"`
+	extensionFields protoimpl.ExtensionFields `json:"-"`
 }
 
 func (x *MessageSet) Reset() {
@@ -1092,9 +1092,9 @@ func (*MessageSet) Descriptor() ([]byte, []int) {
 }
 
 type MessageSetExtension struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	OptString *string `protobuf:"bytes,1,opt,name=opt_string,json=optString" json:"opt_string,omitempty"`
 }
@@ -1139,10 +1139,10 @@ func (x *MessageSetExtension) GetOptString() string {
 }
 
 type FakeMessageSet struct {
-	state           protoimpl.MessageState
-	sizeCache       protoimpl.SizeCache
-	unknownFields   protoimpl.UnknownFields
-	extensionFields protoimpl.ExtensionFields
+	state           protoimpl.MessageState    `json:"-"`
+	sizeCache       protoimpl.SizeCache       `json:"-"`
+	unknownFields   protoimpl.UnknownFields   `json:"-"`
+	extensionFields protoimpl.ExtensionFields `json:"-"`
 }
 
 func (x *FakeMessageSet) Reset() {
@@ -1178,9 +1178,9 @@ func (*FakeMessageSet) Descriptor() ([]byte, []int) {
 }
 
 type FakeMessageSetExtension struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	OptString *string `protobuf:"bytes,1,opt,name=opt_string,json=optString" json:"opt_string,omitempty"`
 }
@@ -1226,9 +1226,9 @@ func (x *FakeMessageSetExtension) GetOptString() string {
 
 // Message contains well-known type fields.
 type KnownTypes struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	OptBool      *wrapperspb.BoolValue   `protobuf:"bytes,1,opt,name=opt_bool,json=optBool" json:"opt_bool,omitempty"`
 	OptInt32     *wrapperspb.Int32Value  `protobuf:"bytes,2,opt,name=opt_int32,json=optInt32" json:"opt_int32,omitempty"`
@@ -1409,9 +1409,9 @@ func (x *KnownTypes) GetOptFieldmask() *fieldmaskpb.FieldMask {
 }
 
 type Nests_OptGroup struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	OptString      *string                        `protobuf:"bytes,1,opt,name=opt_string,json=optString" json:"opt_string,omitempty"`
 	OptNested      *Nested                        `protobuf:"bytes,2,opt,name=opt_nested,json=optNested" json:"opt_nested,omitempty"`
@@ -1472,9 +1472,9 @@ func (x *Nests_OptGroup) GetOptnestedgroup() *Nests_OptGroup_OptNestedGroup {
 }
 
 type Nests_RptGroup struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	RptString []string `protobuf:"bytes,1,rep,name=rpt_string,json=rptString" json:"rpt_string,omitempty"`
 }
@@ -1519,9 +1519,9 @@ func (x *Nests_RptGroup) GetRptString() []string {
 }
 
 type Nests_OptGroup_OptNestedGroup struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	OptFixed32 *uint32 `protobuf:"fixed32,1,opt,name=opt_fixed32,json=optFixed32" json:"opt_fixed32,omitempty"`
 }

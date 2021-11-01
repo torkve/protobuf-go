@@ -344,18 +344,21 @@ func genMessageFields(g *protogen.GeneratedFile, f *fileInfo, m *messageInfo) {
 }
 
 func genMessageInternalFields(g *protogen.GeneratedFile, f *fileInfo, m *messageInfo, sf *structFields) {
-	g.P(genid.State_goname, " ", protoimplPackage.Ident("MessageState"))
+	tagsNoJson := structTags{
+		{"json", "-"},
+	}
+	g.P(genid.State_goname, " ", protoimplPackage.Ident("MessageState"), tagsNoJson)
 	sf.append(genid.State_goname)
-	g.P(genid.SizeCache_goname, " ", protoimplPackage.Ident("SizeCache"))
+	g.P(genid.SizeCache_goname, " ", protoimplPackage.Ident("SizeCache"), tagsNoJson)
 	sf.append(genid.SizeCache_goname)
 	if m.hasWeak {
-		g.P(genid.WeakFields_goname, " ", protoimplPackage.Ident("WeakFields"))
+		g.P(genid.WeakFields_goname, " ", protoimplPackage.Ident("WeakFields"), tagsNoJson)
 		sf.append(genid.WeakFields_goname)
 	}
-	g.P(genid.UnknownFields_goname, " ", protoimplPackage.Ident("UnknownFields"))
+	g.P(genid.UnknownFields_goname, " ", protoimplPackage.Ident("UnknownFields"), tagsNoJson)
 	sf.append(genid.UnknownFields_goname)
 	if m.Desc.ExtensionRanges().Len() > 0 {
-		g.P(genid.ExtensionFields_goname, " ", protoimplPackage.Ident("ExtensionFields"))
+		g.P(genid.ExtensionFields_goname, " ", protoimplPackage.Ident("ExtensionFields"), tagsNoJson)
 		sf.append(genid.ExtensionFields_goname)
 	}
 	if sf.count > 0 {

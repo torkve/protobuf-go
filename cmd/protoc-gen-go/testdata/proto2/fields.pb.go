@@ -72,9 +72,9 @@ func (FieldTestMessage_Enum) EnumDescriptor() ([]byte, []int) {
 }
 
 type FieldTestMessage struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	OptionalBool        *bool                                `protobuf:"varint,1,opt,name=optional_bool,json=optionalBool" json:"optional_bool,omitempty"`
 	OptionalEnum        *FieldTestMessage_Enum               `protobuf:"varint,2,opt,name=optional_enum,json=optionalEnum,enum=goproto.protoc.proto2.FieldTestMessage_Enum" json:"optional_enum,omitempty"`
@@ -1111,9 +1111,9 @@ func (*FieldTestMessage_OneofTwo_1) isFieldTestMessage_OneofTwo() {}
 func (*FieldTestMessage_OneofTwo_2) isFieldTestMessage_OneofTwo() {}
 
 type FieldTestMessage_OptionalGroup struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	OptionalGroup *string `protobuf:"bytes,19,opt,name=optional_group,json=optionalGroup" json:"optional_group,omitempty"`
 }
@@ -1158,9 +1158,9 @@ func (x *FieldTestMessage_OptionalGroup) GetOptionalGroup() string {
 }
 
 type FieldTestMessage_RequiredGroup struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	RequiredGroup *string `protobuf:"bytes,119,req,name=required_group,json=requiredGroup" json:"required_group,omitempty"`
 }
@@ -1205,9 +1205,9 @@ func (x *FieldTestMessage_RequiredGroup) GetRequiredGroup() string {
 }
 
 type FieldTestMessage_RepeatedGroup struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	RepeatedGroup []string `protobuf:"bytes,219,rep,name=repeated_group,json=repeatedGroup" json:"repeated_group,omitempty"`
 }
@@ -1252,9 +1252,9 @@ func (x *FieldTestMessage_RepeatedGroup) GetRepeatedGroup() []string {
 }
 
 type FieldTestMessage_OneofGroup struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	OneofGroupField *string `protobuf:"bytes,619,opt,name=oneof_group_field,json=oneofGroupField" json:"oneof_group_field,omitempty"`
 }
@@ -1299,9 +1299,9 @@ func (x *FieldTestMessage_OneofGroup) GetOneofGroupField() string {
 }
 
 type FieldTestMessage_Message struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 }
 
 func (x *FieldTestMessage_Message) Reset() {

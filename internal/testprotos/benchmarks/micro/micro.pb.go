@@ -15,9 +15,9 @@ import (
 )
 
 type SixteenRequired struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	F1  *int32 `protobuf:"varint,1,req,name=f1" json:"f1,omitempty"`
 	F2  *int32 `protobuf:"varint,2,req,name=f2" json:"f2,omitempty"`

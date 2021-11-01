@@ -122,9 +122,9 @@ func (Enums_NestedEnum) EnumDescriptor() ([]byte, []int) {
 
 // Scalars contains scalar field types.
 type Scalars struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	SBool     bool    `protobuf:"varint,1,opt,name=s_bool,json=sBool,proto3" json:"s_bool,omitempty"`
 	SInt32    int32   `protobuf:"varint,2,opt,name=s_int32,json=sInt32,proto3" json:"s_int32,omitempty"`
@@ -282,9 +282,9 @@ func (x *Scalars) GetSString() string {
 
 // Message contains repeated fields.
 type Repeats struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	RptBool   []bool    `protobuf:"varint,1,rep,packed,name=rpt_bool,json=rptBool,proto3" json:"rpt_bool,omitempty"`
 	RptInt32  []int32   `protobuf:"varint,2,rep,packed,name=rpt_int32,json=rptInt32,proto3" json:"rpt_int32,omitempty"`
@@ -393,9 +393,9 @@ func (x *Repeats) GetRptBytes() [][]byte {
 }
 
 type Proto3Optional struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	OptBool    *bool    `protobuf:"varint,1,opt,name=opt_bool,json=optBool,proto3,oneof" json:"opt_bool,omitempty"`
 	OptInt32   *int32   `protobuf:"varint,2,opt,name=opt_int32,json=optInt32,proto3,oneof" json:"opt_int32,omitempty"`
@@ -521,9 +521,9 @@ func (x *Proto3Optional) GetOptMessage() *Nested {
 
 // Message contains enum fields.
 type Enums struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	SEnum       Enum             `protobuf:"varint,1,opt,name=s_enum,json=sEnum,proto3,enum=pb3.Enum" json:"s_enum,omitempty"`
 	SNestedEnum Enums_NestedEnum `protobuf:"varint,3,opt,name=s_nested_enum,json=sNestedEnum,proto3,enum=pb3.Enums_NestedEnum" json:"s_nested_enum,omitempty"`
@@ -577,9 +577,9 @@ func (x *Enums) GetSNestedEnum() Enums_NestedEnum {
 
 // Message contains nested message field.
 type Nests struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	SNested *Nested `protobuf:"bytes,2,opt,name=s_nested,json=sNested,proto3" json:"s_nested,omitempty"`
 }
@@ -625,9 +625,9 @@ func (x *Nests) GetSNested() *Nested {
 
 // Message type used as submessage.
 type Nested struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	SString string  `protobuf:"bytes,1,opt,name=s_string,json=sString,proto3" json:"s_string,omitempty"`
 	SNested *Nested `protobuf:"bytes,2,opt,name=s_nested,json=sNested,proto3" json:"s_nested,omitempty"`
@@ -681,9 +681,9 @@ func (x *Nested) GetSNested() *Nested {
 
 // Message contains oneof field.
 type Oneofs struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	// Types that are assignable to Union:
 	//	*Oneofs_OneofEnum
@@ -776,9 +776,9 @@ func (*Oneofs_OneofNested) isOneofs_Union() {}
 
 // Message contains map fields.
 type Maps struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	Int32ToStr   map[int32]string   `protobuf:"bytes,1,rep,name=int32_to_str,json=int32ToStr,proto3" json:"int32_to_str,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	BoolToUint32 map[bool]uint32    `protobuf:"bytes,2,rep,name=bool_to_uint32,json=boolToUint32,proto3" json:"bool_to_uint32,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
@@ -856,9 +856,9 @@ func (x *Maps) GetStrToOneofs() map[string]*Oneofs {
 
 // Message for testing json_name option.
 type JSONNames struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	SString string `protobuf:"bytes,1,opt,name=s_string,json=foo_bar,proto3" json:"s_string,omitempty"`
 }

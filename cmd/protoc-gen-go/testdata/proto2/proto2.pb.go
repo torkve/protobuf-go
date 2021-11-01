@@ -15,9 +15,9 @@ import (
 )
 
 type Message struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	I32 *int32   `protobuf:"varint,1,opt,name=i32" json:"i32,omitempty"`
 	M   *Message `protobuf:"bytes,2,opt,name=m" json:"m,omitempty"`

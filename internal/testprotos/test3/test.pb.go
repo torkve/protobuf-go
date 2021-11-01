@@ -119,9 +119,9 @@ func (TestAllTypes_NestedEnum) EnumDescriptor() ([]byte, []int) {
 }
 
 type TestAllTypes struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	SingularInt32          int32                                  `protobuf:"varint,81,opt,name=singular_int32,json=singularInt32,proto3" json:"singular_int32,omitempty"`
 	SingularInt64          int64                                  `protobuf:"varint,82,opt,name=singular_int64,json=singularInt64,proto3" json:"singular_int64,omitempty"`
@@ -937,9 +937,9 @@ func (*TestAllTypes_OneofDouble) isTestAllTypes_OneofField() {}
 func (*TestAllTypes_OneofEnum) isTestAllTypes_OneofField() {}
 
 type ForeignMessage struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	C int32 `protobuf:"varint,1,opt,name=c,proto3" json:"c,omitempty"`
 	D int32 `protobuf:"varint,2,opt,name=d,proto3" json:"d,omitempty"`
@@ -992,9 +992,9 @@ func (x *ForeignMessage) GetD() int32 {
 }
 
 type TestAllTypes_NestedMessage struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
+	state         protoimpl.MessageState  `json:"-"`
+	sizeCache     protoimpl.SizeCache     `json:"-"`
+	unknownFields protoimpl.UnknownFields `json:"-"`
 
 	A           int32         `protobuf:"varint,1,opt,name=a,proto3" json:"a,omitempty"`
 	Corecursive *TestAllTypes `protobuf:"bytes,2,opt,name=corecursive,proto3" json:"corecursive,omitempty"`
